@@ -18,13 +18,13 @@ const User = () => {
   }
 
   return (
-    <>
-      <button onClick={handleBack}>Back</button>
-      <button onClick={handleShow}>Show</button>
+    <div className="m-5">
+      <button className="bg-yellow-500 text-white rounded-full p-2 mx-2 text-sm hover:bg-yellow-600 focus:ring focus:ring-white-50" onClick={handleBack}>Back</button>
+      <button className="bg-blue-500 text-white rounded-full p-2 mx-2 text-sm hover:text-md hover:bg-blue-600 focus:ring focus:ring-white-50" onClick={handleShow}>Show</button>
       {show && <Suspense fallback={<Loader/>}>
         <DisplayUser userId={userId}/>
       </Suspense>}
-    </>
+    </div>
   )
 }
 
